@@ -1,4 +1,7 @@
+a wip modpack that provides more trains for advtrains
+
 License of media: CC-BY-SA 3.0
+License of code: NONE!!!
 
 moretrains_steam
 	model: based on https://archive.org/download/dampflock_better/dampflock_better.blend / mbb
