@@ -37,7 +37,7 @@ advtrains.register_wagon("steam_train", {
 	},
 	assign_to_seat_group = {"dstand"},
 	visual_size = {x=1, y=1},
-	wagon_span=2.565,
+	wagon_span=2.567,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	custom_on_velocity_change=function(self, velocity)
 		if self.old_anim_velocity~=advtrains.abs_ceil(velocity) then
@@ -97,7 +97,7 @@ advtrains.register_wagon("tender", {
 	max_speed=30,
 	seats = {},
 	visual_size = {x=1, y=1},
-	wagon_span=1.665,
+	wagon_span=1.667,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	drops={"default:steelblock 1"},
 	has_inventory = true,
