@@ -21,4 +21,7 @@ mod - moretrains_industrial:
 moretrains_wagon_*
 	models: own
 	textures: own, re-used few parts from steam train texture
+		wood wagon uses default tree texture from default (Cisoun)
 	icons: from advtrains - placeholder / wip
+
+	
