@@ -25,7 +25,29 @@ advtrains.register_wagon("moretrains_wagon_tank", {
 	inventory_list_sizes = {
 		box=8*3,
 	},
-}, S("Industrial tank wagon"), "moretrains_wagon_tank_inv.png")
+}, S("Industrial tank wagon (silver)"), "moretrains_wagon_tank_inv.png")
+
+advtrains.register_wagon("moretrains_wagon_tank2", {
+	mesh="moretrains_wagon_tank.obj",
+	textures = {"moretrains_wagon_tank2.png"},
+	seats = {},
+	drives_on={default=true},
+	max_speed=20,
+	visual_size = {x=1, y=1},
+	wagon_span=2.349,
+	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
+	drops={"default:steelblock 4"},
+	has_inventory = true,
+	get_inventory_formspec = function(self, pname, invname)
+		return "size[8,11]"..
+			"list["..invname..";box;0,0;8,3;]"..
+			"list[current_player;main;0,5;8,4;]"..
+			"listring[]"
+	end,
+	inventory_list_sizes = {
+		box=8*3,
+	},
+}, S("Industrial tank wagon (blue)"), "moretrains_wagon_tank2_inv.png")
 
 
 advtrains.register_wagon("moretrains_wagon_wood", {
@@ -48,7 +70,7 @@ advtrains.register_wagon("moretrains_wagon_wood", {
 	inventory_list_sizes = {
 		box=8*3,
 	},
-}, S("Industrial wood wagon"), "moretrains_wagon_tank_inv.png")
+}, S("Industrial wood wagon"), "moretrains_wagon_wood_inv.png")
 
 advtrains.register_wagon("moretrains_wagon_wood_loaded", {
 	mesh="moretrains_wagon_wood_loaded.obj",
@@ -70,4 +92,4 @@ advtrains.register_wagon("moretrains_wagon_wood_loaded", {
 	inventory_list_sizes = {
 		box=8*3,
 	},
-}, S("Industrial wood wagon (loaded)"), "moretrains_wagon_tank_inv.png")
+}, S("Industrial wood wagon (loaded)"), "moretrains_wagon_wood_loaded_inv.png")

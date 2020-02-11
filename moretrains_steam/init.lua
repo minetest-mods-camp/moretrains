@@ -13,7 +13,7 @@ advtrains.register_wagon("steam_train", {
 	textures = {"moretrains_steam_train.png"},
 	is_locomotive=true,
 	drives_on={default=true},
-	max_speed=16,
+	max_speed=11,
 	seats = {
 		{
 			name=S("Driver Stand (left)"),
