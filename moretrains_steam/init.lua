@@ -91,7 +91,7 @@ advtrains.register_wagon("steam_train", {
 }, S("Steam Train #1"), "moretrains_steam_train_inv.png")
 
 advtrains.register_wagon("tender", {
-	mesh="moretrains_steam_tender.obj",
+	mesh="moretrains_steam_tender.b3d",
 	textures = {"moretrains_steam_tender.png"},
 	drives_on={default=true},
 	max_speed=30,

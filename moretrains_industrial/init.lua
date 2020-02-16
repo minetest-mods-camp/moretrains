@@ -6,7 +6,7 @@ else
 end
 
 advtrains.register_wagon("moretrains_wagon_tank", {
-	mesh="moretrains_wagon_tank.obj",
+	mesh="moretrains_wagon_tank.b3d",
 	textures = {"moretrains_wagon_tank.png"},
 	seats = {},
 	drives_on={default=true},
@@ -28,7 +28,7 @@ advtrains.register_wagon("moretrains_wagon_tank", {
 }, S("Industrial tank wagon (silver)"), "moretrains_wagon_tank_inv.png")
 
 advtrains.register_wagon("moretrains_wagon_tank2", {
-	mesh="moretrains_wagon_tank.obj",
+	mesh="moretrains_wagon_tank.b3d",
 	textures = {"moretrains_wagon_tank2.png"},
 	seats = {},
 	drives_on={default=true},
@@ -51,7 +51,7 @@ advtrains.register_wagon("moretrains_wagon_tank2", {
 
 
 advtrains.register_wagon("moretrains_wagon_wood", {
-	mesh="moretrains_wagon_wood.obj",
+	mesh="moretrains_wagon_wood.b3d",
 	textures = {"moretrains_wagon_wood.png"},
 	seats = {},
 	drives_on={default=true},
@@ -73,7 +73,7 @@ advtrains.register_wagon("moretrains_wagon_wood", {
 }, S("Industrial wood wagon"), "moretrains_wagon_wood_inv.png")
 
 advtrains.register_wagon("moretrains_wagon_wood_loaded", {
-	mesh="moretrains_wagon_wood_loaded.obj",
+	mesh="moretrains_wagon_wood_loaded.b3d",
 	textures = {"moretrains_wagon_wood.png"},
 	seats = {},
 	drives_on={default=true},
@@ -95,7 +95,7 @@ advtrains.register_wagon("moretrains_wagon_wood_loaded", {
 }, S("Industrial wood wagon (loaded)"), "moretrains_wagon_wood_loaded_inv.png")
 
 advtrains.register_wagon("moretrains_wagon_box", {
-	mesh="moretrains_wagon_box.obj",
+	mesh="moretrains_wagon_box.b3d",
 	textures = {"moretrains_wagon_box.png"},
 	seats = {},
 	drives_on={default=true},
