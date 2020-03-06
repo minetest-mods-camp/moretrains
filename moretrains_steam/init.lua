@@ -8,7 +8,7 @@ end
 -- length of the steam engine loop sound
 local SND_LOOP_LEN = 5
 
-advtrains.register_wagon("steam_train", {
+advtrains.register_wagon("moretrains_steam_train", {
 	mesh="moretrains_steam_train.b3d",
 	textures = {"moretrains_steam_train.png"},
 	is_locomotive=true,
@@ -90,6 +90,63 @@ advtrains.register_wagon("steam_train", {
 	horn_sound = "advtrains_steam_whistle",
 }, S("Steam Train #1"), "moretrains_steam_train_inv.png")
 
+advtrains.register_wagon("moretrains_tender", {
+	mesh="moretrains_steam_tender.b3d",
+	textures = {"moretrains_steam_tender.png"},
+	drives_on={default=true},
+	max_speed=30,
+	seats = {},
+	visual_size = {x=1, y=1},
+	wagon_span=1.667,
+	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
+	drops={"default:steelblock 1"},
+	has_inventory = true,
+	get_inventory_formspec = function(self, pname, invname)
+		return "size[8,11]"..
+			"list["..invname..";box;0,0;8,3;]"..
+			"list[current_player;main;0,5;8,4;]"..
+			"listring[]"
+	end,
+	inventory_list_sizes = {
+		box=1*8,
+	},
+}, S("Tender #1"), "moretrains_steam_tender_inv.png")
+
+advtrains.register_wagon("steam_train", {
+	mesh="moretrains_steam_train.b3d",
+	textures = {"moretrains_steam_train.png"},
+	is_locomotive=true,
+	drives_on={default=true},
+	max_speed=11,
+	seats = {
+		{
+			name=S("Driver Stand (left)"),
+			attach_offset={x=-5, y=0, z=-15},
+			view_offset={x=0, y=6, z=0},
+			group = "dstand",
+		},
+		{
+			name=S("Driver Stand (right)"),
+			attach_offset={x=5, y=0, z=-15},
+			view_offset={x=0, y=6, z=0},
+			group = "dstand",
+		},
+	},
+	seat_groups = {
+		dstand={
+			name = "Driver Stand",
+			driving_ctrl_access=true,
+			access_to = {},
+		},
+	},
+	assign_to_seat_group = {"dstand"},
+	visual_size = {x=1, y=1},
+	wagon_span=2.567,
+	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
+	drops={"default:steelblock 1"},
+	horn_sound = "advtrains_steam_whistle",
+}, S("Steam Train (Deprecated) will be removed soon"), "moretrains_deprecated.png")
+
 advtrains.register_wagon("tender", {
 	mesh="moretrains_steam_tender.b3d",
 	textures = {"moretrains_steam_tender.png"},
@@ -108,8 +165,28 @@ advtrains.register_wagon("tender", {
 			"listring[]"
 	end,
 	inventory_list_sizes = {
-		box=8*3,
+		box=1*8,
 	},
-}, S("Tender #1"), "moretrains_steam_tender_inv.png")
+}, S("Tender (Deprecated) will be removed soon"), "moretrains_deprecated.png")
 
+
+
+
+minetest.register_craft({
+	output = 'advtrains:moretrains_steam_train',
+	recipe = {
+		{'', '', 'advtrains:chimney'},
+		{'advtrains:driver_cab', 'dye:blue', 'advtrains:boiler'},
+		{'advtrains:wheel', 'advtrains:wheel', 'advtrains:wheel'},
+	},
+})
+
+minetest.register_craft({
+	output = 'advtrains:moretrains_tender',
+	recipe = {
+		{'default:steel_ingot', 'default:coalblock', 'default:steel_ingot'},
+		{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
+		{'advtrains:wheel', '', 'advtrains:wheel'},
+	},
+})
 

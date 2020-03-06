@@ -115,3 +115,62 @@ advtrains.register_wagon("moretrains_wagon_box", {
 		box=8*3,
 	},
 }, S("Box wagon"), "moretrains_wagon_box_inv.png")
+
+minetest.register_craft({
+	output = 'advtrains:moretrains_wagon_wood',
+	recipe = {
+		{'default:stick', 'default:stick', 'default:stick'},
+		{'group:wood', 'default:chest', 'group:wood'},
+		{'advtrains:wheel', '', 'advtrains:wheel'},
+	},
+})
+
+minetest.register_craft({
+	output = "advtrains:moretrains_wagon_wood_loaded",
+	type = "shapeless",
+	recipe = {"advtrains:moretrains_wagon_wood", "group:tree", "group:tree"},
+})
+
+minetest.register_craftitem("moretrains_industrial:item_tank", {
+	description = S("tank (for tankwagon)"),
+	inventory_image = "moretrains_item_tank.png"
+})
+
+minetest.register_craft({
+	output = "moretrains_industrial:item_tank",
+	recipe = {
+		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
+		{"default:steel_ingot", "bucket:bucket_empty", "default:steel_ingot"},
+		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
+	},
+})
+
+minetest.register_craft({
+	output = 'advtrains:moretrains_wagon_tank',
+	recipe = {
+		{'', '', ''},
+		{'default:steel_ingot', 'moretrains_industrial:item_tank', 'default:steel_ingot'},
+		{'advtrains:wheel', '', 'advtrains:wheel'},
+	},
+})
+
+minetest.register_craft({
+	output = 'advtrains:moretrains_wagon_tank2',
+	recipe = {
+		{'', 'dye:blue', ''},
+		{'default:steel_ingot', 'moretrains_industrial:item_tank', 'default:steel_ingot'},
+		{'advtrains:wheel', '', 'advtrains:wheel'},
+	},
+})
+
+minetest.register_craft({
+	output = 'advtrains:moretrains_wagon_box',
+	recipe = {
+		{'default:copper_ingot', 'default:copper_ingot', 'default:copper_ingot'},
+		{'default:junglewood', 'default:chest', 'default:junglewood'},
+		{'advtrains:wheel', '', 'advtrains:wheel'},
+	},
+})
+
+
+
