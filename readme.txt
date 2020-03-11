@@ -22,5 +22,10 @@ moretrains_wagon_*
 	models: own
 	textures: own
 		wood wagon uses default tree texture from default (Cisoun)
-	icons: from advtrains - placeholder / wip
+	icons: based on icons from advtrains
+
+mod - moretrains_japan:
+
+	models and textures: own
+	icons: based on icons from advtrains
 

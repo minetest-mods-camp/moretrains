@@ -6,7 +6,7 @@ else
 end
 
 advtrains.register_wagon("moretrains_engine_japan", {
-	mesh="moretrains_engine_japan.obj",
+	mesh="moretrains_japan_bullet_engine.b3d",
 	textures = {"moretrains_engine_japan.png"},
 	drives_on={default=true},
 	max_speed=20,
@@ -56,16 +56,16 @@ advtrains.register_wagon("moretrains_engine_japan", {
 		},
 	},
 	assign_to_seat_group = {"dstand", "pass"},
-	--doors={
-	--	open={
-	--		[-1]={frames={x=0, y=20}, time=1},
-	--		[1]={frames={x=40, y=60}, time=1}
-	--	},
-	--	close={
-	--		[-1]={frames={x=20, y=40}, time=1},
-	--		[1]={frames={x=60, y=80}, time=1}
-	--	}
-	--},
+	doors={
+		open={
+			[-1]={frames={x=0, y=10}, time=1},
+			[1]={frames={x=20, y=30}, time=1}
+		},
+		close={
+			[-1]={frames={x=10, y=20}, time=1},
+			[1]={frames={x=30, y=40}, time=1}
+		}
+	},
 	door_entry={-1.7},
 	visual_size = {x=1, y=1},
 	wagon_span=3.18,
@@ -76,7 +76,7 @@ advtrains.register_wagon("moretrains_engine_japan", {
 }, S("Japanese Train Engine (moretrains)"), "moretrains_engine_japan_inv.png")
 
 advtrains.register_wagon("moretrains_wagon_japan", {
-	mesh="moretrains_wagon_japan.obj",
+	mesh="moretrains_japan_bullet_wagon.b3d",
 	textures = {"moretrains_wagon_japan.png"},
 	drives_on={default=true},
 	max_speed=20,
@@ -128,12 +128,12 @@ advtrains.register_wagon("moretrains_wagon_japan", {
 	assign_to_seat_group = {"pass"},
 	doors={
 		open={
-			[-1]={frames={x=0, y=20}, time=1},
-			[1]={frames={x=40, y=60}, time=1}
+			[-1]={frames={x=0, y=10}, time=1},
+			[1]={frames={x=20, y=30}, time=1}
 		},
 		close={
-			[-1]={frames={x=20, y=40}, time=1},
-			[1]={frames={x=60, y=80}, time=1}
+			[-1]={frames={x=10, y=20}, time=1},
+			[1]={frames={x=30, y=40}, time=1}
 		}
 	},
 	door_entry={-1.7, 1.7},
