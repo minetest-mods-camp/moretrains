@@ -14,7 +14,7 @@ advtrains.register_wagon("moretrains_wagon_tank", {
 	visual_size = {x=1, y=1},
 	wagon_span=2.349,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
-	drops={"default:steelblock 4"},
+	drops={"default:steelblock 2"},
 	has_inventory = true,
 	get_inventory_formspec = function(self, pname, invname)
 		return "size[8,11]"..
@@ -36,7 +36,7 @@ advtrains.register_wagon("moretrains_wagon_tank2", {
 	visual_size = {x=1, y=1},
 	wagon_span=2.349,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
-	drops={"default:steelblock 4"},
+	drops={"default:steelblock 2"},
 	has_inventory = true,
 	get_inventory_formspec = function(self, pname, invname)
 		return "size[8,11]"..
@@ -59,7 +59,7 @@ advtrains.register_wagon("moretrains_wagon_wood", {
 	visual_size = {x=1, y=1},
 	wagon_span=2.554,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
-	drops={"default:steelblock 4"},
+	drops={"default:steelblock"},
 	has_inventory = true,
 	get_inventory_formspec = function(self, pname, invname)
 		return "size[8,11]"..
@@ -81,7 +81,7 @@ advtrains.register_wagon("moretrains_wagon_wood_loaded", {
 	visual_size = {x=1, y=1},
 	wagon_span=2.554,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
-	drops={"default:steelblock 4"},
+	drops={"default:steelblock"},
 	has_inventory = true,
 	get_inventory_formspec = function(self, pname, invname)
 		return "size[8,11]"..
@@ -103,7 +103,7 @@ advtrains.register_wagon("moretrains_wagon_box", {
 	visual_size = {x=1, y=1},
 	wagon_span=2.254,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
-	drops={"default:steelblock 4"},
+	drops={"default:steelblock"},
 	has_inventory = true,
 	get_inventory_formspec = function(self, pname, invname)
 		return "size[8,11]"..

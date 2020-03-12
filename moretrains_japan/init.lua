@@ -71,7 +71,7 @@ advtrains.register_wagon("moretrains_engine_japan", {
 	wagon_span=3.18,
 	is_locomotive=true,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
-	drops={"default:steelblock 4"},
+	drops={"default:steelblock"},
 	horn_sound = "moretrains_japan_horn",
 }, S("Japanese Train Engine (moretrains)"), "moretrains_engine_japan_inv.png")
 
@@ -140,6 +140,24 @@ advtrains.register_wagon("moretrains_wagon_japan", {
 	visual_size = {x=1, y=1},
 	wagon_span=3.0,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
-	drops={"default:steelblock 4"},
+	drops={"default:steelblock"},
 }, S("Japanese Train Wagon (moretrains)"), "moretrains_wagon_japan_inv.png")
+
+minetest.register_craft({
+	output = 'advtrains:moretrains_wagon_japan',
+	recipe = {
+		{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
+		{'default:glass', 'dye:green', 'default:glass'},
+		{'advtrains:wheel', '', 'advtrains:wheel'},
+	},
+})
+
+minetest.register_craft({
+	output = 'advtrains:moretrains_engine_japan',
+	recipe = {
+		{'default:steel_ingot', 'default:steel_ingot', ''},
+		{'default:glass', 'dye:green', 'default:glass'},
+		{'advtrains:wheel', 'advtrains:wheel', 'advtrains:wheel'},
+	},
+})
 
