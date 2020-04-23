@@ -29,3 +29,7 @@ mod - moretrains_japan:
 	models and textures: own
 	icons: based on icons from advtrains
 
+mod - moretrains_vintage:
+
+	todo
+
