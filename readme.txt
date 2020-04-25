@@ -31,5 +31,7 @@ mod - moretrains_japan:
 
 mod - moretrains_vintage:
 
-	todo
+	models: own 
+	texture: own, uses default_coal_block.png from minetest game (Zeg9)
+	icons: own
 

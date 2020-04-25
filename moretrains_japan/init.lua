@@ -13,7 +13,7 @@ advtrains.register_wagon("moretrains_engine_japan", {
 	seats = {
 		{
 			name=S("Driver stand"),
-			attach_offset={x=0, y=-2, z=13},
+			attach_offset={x=1, y=1, z=0},
 			view_offset={x=0, y=1.5, z=0},
 			group="dstand",
 		},
