@@ -35,3 +35,9 @@ mod - moretrains_vintage:
 	texture: own, uses default_coal_block.png from minetest game (Zeg9)
 	icons: own
 
+
+
+planned wagons / trains:
+hopper car (industrial)
+more steam engine types
+diesel trains
