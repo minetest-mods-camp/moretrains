@@ -35,6 +35,11 @@ mod - moretrains_vintage:
 	texture: own, uses default_coal_block.png from minetest game (Zeg9)
 	icons: own
 
+mod -moretrains_basic:
+
+	model: own
+	texture: own
+	icons: based on icons from advtrains
 
 
 planned wagons / trains:

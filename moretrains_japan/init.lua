@@ -146,7 +146,7 @@ advtrains.register_wagon("moretrains_wagon_japan", {
 minetest.register_craft({
 	output = 'advtrains:moretrains_wagon_japan',
 	recipe = {
-		{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
+		{'default:steelblock', 'default:steel_ingot', 'default:steelblock'},
 		{'default:glass', 'dye:green', 'default:glass'},
 		{'advtrains:wheel', '', 'advtrains:wheel'},
 	},
@@ -155,7 +155,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'advtrains:moretrains_engine_japan',
 	recipe = {
-		{'default:steel_ingot', 'default:steel_ingot', ''},
+		{'default:steelblock', 'default:steelblock', ''},
 		{'default:glass', 'dye:green', 'default:glass'},
 		{'advtrains:wheel', 'advtrains:wheel', 'advtrains:wheel'},
 	},
