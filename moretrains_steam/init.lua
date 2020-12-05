@@ -17,14 +17,14 @@ advtrains.register_wagon("moretrains_steam_train", {
 	seats = {
 		{
 			name=S("Driver Stand (left)"),
-			attach_offset={x=-5, y=0, z=-15},
-			view_offset={x=0, y=6, z=0},
+			attach_offset={x=-5, y=3, z=-16},
+			view_offset={x=0, y=7, z=0},
 			group = "dstand",
 		},
 		{
 			name=S("Driver Stand (right)"),
-			attach_offset={x=5, y=0, z=-15},
-			view_offset={x=0, y=6, z=0},
+			attach_offset={x=5, y=3, z=-16},
+			view_offset={x=0, y=7, z=0},
 			group = "dstand",
 		},
 	},
@@ -37,7 +37,7 @@ advtrains.register_wagon("moretrains_steam_train", {
 	},
 	assign_to_seat_group = {"dstand"},
 	visual_size = {x=1, y=1},
-	wagon_span=2.567,
+	wagon_span=2.587,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	custom_on_velocity_change=function(self, velocity)
 		if self.old_anim_velocity~=advtrains.abs_ceil(velocity) then
@@ -64,8 +64,8 @@ advtrains.register_wagon("moretrains_steam_train", {
 			amount = 10,
 			time = 0,
 		--  ^ If time is 0 has infinite lifespan and spawns the amount on a per-second base
-			minpos = {x=0, y=2.15, z=1.95},
-			maxpos = {x=0, y=2.2, z=1.9},
+			minpos = {x=0, y=2.32, z=2.08},
+			maxpos = {x=0, y=2.4, z=2.03},
 			minvel = {x=-0.2, y=1.8, z=-0.2},
 			maxvel = {x=0.2, y=2, z=0.2},
 			minacc = {x=0, y=-0.1, z=0},
@@ -131,4 +131,5 @@ minetest.register_craft({
 		{'advtrains:wheel', '', 'advtrains:wheel'},
 	},
 })
+
 
