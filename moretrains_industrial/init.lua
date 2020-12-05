@@ -12,7 +12,7 @@ advtrains.register_wagon("moretrains_wagon_tank", {
 	drives_on={default=true},
 	max_speed=20,
 	visual_size = {x=1, y=1},
-	wagon_span=2.349,
+	wagon_span=2.719,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	drops={"default:steelblock 2"},
 	has_inventory = true,
@@ -34,7 +34,7 @@ advtrains.register_wagon("moretrains_wagon_tank2", {
 	drives_on={default=true},
 	max_speed=20,
 	visual_size = {x=1, y=1},
-	wagon_span=2.349,
+	wagon_span=2.719,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	drops={"default:steelblock 2"},
 	has_inventory = true,
@@ -57,7 +57,7 @@ advtrains.register_wagon("moretrains_wagon_wood", {
 	drives_on={default=true},
 	max_speed=20,
 	visual_size = {x=1, y=1},
-	wagon_span=2.554,
+	wagon_span=2.784,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	drops={"default:steelblock"},
 	has_inventory = true,
@@ -70,7 +70,7 @@ advtrains.register_wagon("moretrains_wagon_wood", {
 	inventory_list_sizes = {
 		box=8*3,
 	},
-}, S("Industrial wood wagon"), "moretrains_wagon_wood_inv.png")
+}, S("Industrial wood wagon (empty)"), "moretrains_wagon_wood_inv.png")
 
 advtrains.register_wagon("moretrains_wagon_wood_loaded", {
 	mesh="moretrains_wagon_wood_loaded.b3d",
@@ -79,7 +79,7 @@ advtrains.register_wagon("moretrains_wagon_wood_loaded", {
 	drives_on={default=true},
 	max_speed=20,
 	visual_size = {x=1, y=1},
-	wagon_span=2.554,
+	wagon_span=2.784,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	drops={"default:steelblock"},
 	has_inventory = true,
@@ -92,7 +92,97 @@ advtrains.register_wagon("moretrains_wagon_wood_loaded", {
 	inventory_list_sizes = {
 		box=8*3,
 	},
-}, S("Industrial wood wagon (loaded)"), "moretrains_wagon_wood_loaded_inv.png")
+}, S("Industrial wood wagon (default tree)"), "moretrains_wagon_wood_loaded_inv.png")
+
+advtrains.register_wagon("moretrains_wagon_wood_acacia", {
+	mesh="moretrains_wagon_wood_loaded.b3d",
+	textures = {"moretrains_wagon_wood_acacia.png"},
+	seats = {},
+	drives_on={default=true},
+	max_speed=20,
+	visual_size = {x=1, y=1},
+	wagon_span=2.784,
+	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
+	drops={"default:steelblock"},
+	has_inventory = true,
+	get_inventory_formspec = function(self, pname, invname)
+		return "size[8,11]"..
+			"list["..invname..";box;0,0;8,3;]"..
+			"list[current_player;main;0,5;8,4;]"..
+			"listring[]"
+	end,
+	inventory_list_sizes = {
+		box=8*3,
+	},
+}, S("Industrial wood wagon (acacia)"), "moretrains_wagon_wood_acacia_inv.png")
+
+advtrains.register_wagon("moretrains_wagon_wood_jungle", {
+	mesh="moretrains_wagon_wood_loaded.b3d",
+	textures = {"moretrains_wagon_wood_jungle.png"},
+	seats = {},
+	drives_on={default=true},
+	max_speed=20,
+	visual_size = {x=1, y=1},
+	wagon_span=2.784,
+	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
+	drops={"default:steelblock"},
+	has_inventory = true,
+	get_inventory_formspec = function(self, pname, invname)
+		return "size[8,11]"..
+			"list["..invname..";box;0,0;8,3;]"..
+			"list[current_player;main;0,5;8,4;]"..
+			"listring[]"
+	end,
+	inventory_list_sizes = {
+		box=8*3,
+	},
+}, S("Industrial wood wagon (jungle)"), "moretrains_wagon_wood_jungle_inv.png")
+
+advtrains.register_wagon("moretrains_wagon_wood_pine", {
+	mesh="moretrains_wagon_wood_loaded.b3d",
+	textures = {"moretrains_wagon_wood_pine.png"},
+	seats = {},
+	drives_on={default=true},
+	max_speed=20,
+	visual_size = {x=1, y=1},
+	wagon_span=2.784,
+	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
+	drops={"default:steelblock"},
+	has_inventory = true,
+	get_inventory_formspec = function(self, pname, invname)
+		return "size[8,11]"..
+			"list["..invname..";box;0,0;8,3;]"..
+			"list[current_player;main;0,5;8,4;]"..
+			"listring[]"
+	end,
+	inventory_list_sizes = {
+		box=8*3,
+	},
+}, S("Industrial wood wagon (pine)"), "moretrains_wagon_wood_pine_inv.png")
+
+advtrains.register_wagon("moretrains_wagon_wood_aspen", {
+	mesh="moretrains_wagon_wood_loaded.b3d",
+	textures = {"moretrains_wagon_wood_aspen.png"},
+	seats = {},
+	drives_on={default=true},
+	max_speed=20,
+	visual_size = {x=1, y=1},
+	wagon_span=2.784,
+	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
+	drops={"default:steelblock"},
+	has_inventory = true,
+	get_inventory_formspec = function(self, pname, invname)
+		return "size[8,11]"..
+			"list["..invname..";box;0,0;8,3;]"..
+			"list[current_player;main;0,5;8,4;]"..
+			"listring[]"
+	end,
+	inventory_list_sizes = {
+		box=8*3,
+	},
+}, S("Industrial wood wagon (aspen)"), "moretrains_wagon_wood_aspen_inv.png")
+
+
 
 advtrains.register_wagon("moretrains_wagon_box", {
 	mesh="moretrains_wagon_box.b3d",
@@ -101,7 +191,7 @@ advtrains.register_wagon("moretrains_wagon_box", {
 	drives_on={default=true},
 	max_speed=20,
 	visual_size = {x=1, y=1},
-	wagon_span=2.254,
+	wagon_span=2.672,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	drops={"default:steelblock"},
 	has_inventory = true,
@@ -128,7 +218,31 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "advtrains:moretrains_wagon_wood_loaded",
 	type = "shapeless",
-	recipe = {"advtrains:moretrains_wagon_wood", "group:tree", "group:tree"},
+	recipe = {"advtrains:moretrains_wagon_wood", "default:tree", "default:tree"},
+})
+
+minetest.register_craft({
+	output = "advtrains:moretrains_wagon_wood_aspen",
+	type = "shapeless",
+	recipe = {"advtrains:moretrains_wagon_wood", "default:aspen_tree", "default:aspen_tree"},
+})
+
+minetest.register_craft({
+	output = "advtrains:moretrains_wagon_wood_jungle",
+	type = "shapeless",
+	recipe = {"advtrains:moretrains_wagon_wood", "default:jungletree", "default:jungletree"},
+})
+
+minetest.register_craft({
+	output = "advtrains:moretrains_wagon_wood_pine",
+	type = "shapeless",
+	recipe = {"advtrains:moretrains_wagon_wood", "default:pine_tree", "default:pine_tree"},
+})
+
+minetest.register_craft({
+	output = "advtrains:moretrains_wagon_wood_acacia",
+	type = "shapeless",
+	recipe = {"advtrains:moretrains_wagon_wood", "default:acacia_tree", "default:acacia_tree"},
 })
 
 minetest.register_craftitem("moretrains_industrial:item_tank", {

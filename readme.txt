@@ -21,7 +21,11 @@ mod - moretrains_industrial:
 	moretrains_wagon_*
 		models: own
 		textures: own
-			wood wagon uses default tree texture from default (Cisoun)
+			wood wagon loaded variants:
+			default tree + top, jungle tree texture (Cisoun)
+			acaciatree + top, pinetree + top, jungletree top (paramat)
+			aspen + top (sofar)
+			
 		icons: based on icons from advtrains
 
 mod - moretrains_japan:
@@ -53,3 +57,11 @@ planned wagons / trains:
 hopper car (industrial)
 more steam engine types
 MOAR diesel trains
+
+---
+BR 628
+silberlinge
+BR 143
+BR 218
+etr 521
+etr 1000
