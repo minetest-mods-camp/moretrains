@@ -41,7 +41,7 @@ advtrains.register_wagon("moretrains_draisine", {
 	},
 	assign_to_seat_group = {"dstand", "pass"},
 	visual_size = {x=1, y=1},
-	wagon_span=1.06,
+	wagon_span=1.12,
 	is_locomotive=true,
 	collisionbox = {-0.8,-0.5,-0.7, 0.8,2,0.7},
 	custom_on_velocity_change=function(self, velocity)

@@ -68,7 +68,7 @@ advtrains.register_wagon("moretrains_engine_japan", {
 	},
 	door_entry={-1.7},
 	visual_size = {x=1, y=1},
-	wagon_span=3.18,
+	wagon_span=3.1,
 	is_locomotive=true,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	drops={"default:steelblock"},
@@ -138,7 +138,7 @@ advtrains.register_wagon("moretrains_wagon_japan", {
 	},
 	door_entry={-1.7, 1.7},
 	visual_size = {x=1, y=1},
-	wagon_span=3.0,
+	wagon_span=2.96,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	drops={"default:steelblock"},
 }, S("Japanese Train Wagon (moretrains)"), "moretrains_wagon_japan_inv.png")
