@@ -74,6 +74,74 @@ advtrains.register_wagon("moretrains_railroad_car", {
 	drops={"default:steelblock"},
 }, S("Railroad Car"), "moretrains_railroad_car_inv.png")
 
+advtrains.register_wagon("moretrains_silberling", {
+	mesh="moretrains_silberling.obj",
+	textures = {"moretrains_silberling.png"},
+	drives_on={default=true},
+	max_speed=20,
+	seats = {
+		{
+			name="1",
+			attach_offset={x=-4, y=-2, z=8},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+		{
+			name="2",
+			attach_offset={x=4, y=-2, z=8},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+		{
+			name="1a",
+			attach_offset={x=-4, y=-2, z=0},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+		{
+			name="2a",
+			attach_offset={x=4, y=-2, z=0},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+		{
+			name="3",
+			attach_offset={x=-4, y=-2, z=-8},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+		{
+			name="4",
+			attach_offset={x=4, y=8, z=-8},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+	},
+	seat_groups = {
+		pass={
+			name = "Passenger area",
+			access_to = {},
+			require_doors_open=true,
+		},
+	},
+	doors={
+		open={
+			[-1]={frames={x=0, y=10}, time=1},
+			[1]={frames={x=20, y=30}, time=1}
+		},
+		close={
+			[-1]={frames={x=10, y=20}, time=1},
+			[1]={frames={x=30, y=40}, time=1}
+		}
+	},
+	door_entry={-1.7},
+	assign_to_seat_group = {"pass"},
+	visual_size = {x=1, y=1},
+	wagon_span=3,
+	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
+	drops={"default:steelblock"},
+}, S("MT Silberling"), "moretrains_unknown_wagon_inv.png")
+
 minetest.register_craft({
 	output = 'advtrains:moretrains_railroad_car',
 	recipe = {
