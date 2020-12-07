@@ -75,7 +75,7 @@ advtrains.register_wagon("moretrains_railroad_car", {
 }, S("Railroad Car"), "moretrains_railroad_car_inv.png")
 
 advtrains.register_wagon("moretrains_silberling", {
-	mesh="moretrains_silberling.obj",
+	mesh="moretrains_silberling.b3d",
 	textures = {"moretrains_silberling.png"},
 	drives_on={default=true},
 	max_speed=20,
@@ -126,12 +126,12 @@ advtrains.register_wagon("moretrains_silberling", {
 	},
 	doors={
 		open={
-			[-1]={frames={x=0, y=10}, time=1},
-			[1]={frames={x=20, y=30}, time=1}
+			[-1]={frames={x=20, y=30}, time=1},
+			[1]={frames={x=0, y=10}, time=1}
 		},
 		close={
-			[-1]={frames={x=10, y=20}, time=1},
-			[1]={frames={x=30, y=40}, time=1}
+			[-1]={frames={x=30, y=40}, time=1},
+			[1]={frames={x=10, y=20}, time=1}
 		}
 	},
 	door_entry={-1.7},
@@ -140,16 +140,34 @@ advtrains.register_wagon("moretrains_silberling", {
 	wagon_span=3,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	drops={"default:steelblock"},
-}, S("MT Silberling"), "moretrains_unknown_wagon_inv.png")
+}, S("MT Silberling"), "moretrains_silberling_inv.png")
 
 minetest.register_craft({
 	output = 'advtrains:moretrains_railroad_car',
 	recipe = {
 		{'default:steelblock', 'default:tin_ingot', 'default:steelblock'},
-		{'dye:dark_green', 'default:glass', 'dye:blue'},
+		{'default:steelblock', 'default:glass', 'default:steelblock'},
 		{'advtrains:wheel', '', 'advtrains:wheel'},
 	},
 })
+
+local block = 'default:steelblock'
+local ingot = 'default:steel_ingot'
+if  minetest.get_modpath("moreores") then
+	block = 'moreores:silver_block'
+	ingot = 'moreores:silver_ingot'
+	
+end
+
+minetest.register_craft({
+	output = 'advtrains:moretrains_silberling',
+	recipe = {
+		{'default:steelblock', block, 'default:steelblock'},
+		{ingot, 'default:glass', ingot},
+		{'advtrains:wheel', '', 'advtrains:wheel'},
+	},
+})
+
 
 advtrains.register_wagon("moretrains_diesel_german", {
 	mesh="moretrains_diesel_german.b3d",

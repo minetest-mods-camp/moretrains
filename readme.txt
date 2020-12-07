@@ -41,7 +41,7 @@ mod - moretrains_vintage:
 
 mod -moretrains_basic:
 
-	railroad_car
+	railroad_car, silberling
 
 		model: own 
 		texture: own
@@ -53,6 +53,7 @@ mod -moretrains_basic:
 		icon: based on advtrains_engine_industrial_inv from advtrains / mbb
 
 
+
 planned wagons / trains:
 hopper car (industrial)
 more steam engine types
@@ -60,7 +61,7 @@ MOAR diesel trains
 
 ---
 BR 628
-silberlinge
+silberling (train part)
 BR 143
 BR 218
 etr 521
