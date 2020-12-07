@@ -248,11 +248,11 @@ advtrains.register_wagon("moretrains_silberling_train", {
 	assign_to_seat_group = {"dstand"},
 	visual_size = {x=1, y=1},
 	wagon_span=3,
-	is_locomotive=true,
+	is_locomotive=false,
 	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
 	drops={"default:steelblock 4"},
 	horn_sound = "advtrains_industrial_horn",
-}, S("MT Silberling Engine"), "moretrains_silberling_train_inv.png")
+}, S("MT Silberling Cab Car"), "moretrains_silberling_train_inv.png")
 
 
 minetest.register_craft({
