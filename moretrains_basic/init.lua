@@ -150,8 +150,8 @@ advtrains.register_wagon("moretrains_diesel_german", {
 	seats = {
 		{
 			name=S("Driver Stand (right)"),
-			attach_offset={x=0, y=-1.4, z=-7.2},
-			view_offset={x=2, y=0.2, z=-8},
+			attach_offset={x=1, y=1.4, z=-7.2},
+			view_offset={x=2, y=3.1, z=-8},
 			driving_ctrl_access=true,
 			group = "dstand",
 		},
