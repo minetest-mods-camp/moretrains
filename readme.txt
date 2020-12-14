@@ -39,7 +39,7 @@ mod - moretrains_vintage:
 		texture: own, uses default_coal_block.png from minetest game (Zeg9)
 		icons: own
 
-mod -moretrains_basic:
+mod - moretrains_basic:
 
 	railroad_car, silberling
 
@@ -52,6 +52,14 @@ mod -moretrains_basic:
 		texture: own
 		icon: based on advtrains_engine_industrial_inv from advtrains / mbb
 
+mod - moretrains_gondola:
+
+	models and textures: own, except
+		mese block texture (paramat, CC BY-SA 3.0)
+		cobble stone texture (Neuromancer, CC BY-SA 3.0)
+		rail model and texture (from advtrains, CC BY-SA 3.0)
+
+		icons based on box_wagon icon (moretrains_industrial)
 
 
 planned wagons / trains:
