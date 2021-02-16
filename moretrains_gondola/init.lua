@@ -182,29 +182,3 @@ minetest.register_craft({
 	},
 })
 
-minetest.register_craft({
-	output = "advtrains:moretrains_wagon_gondola_mese",
-	type = "shapeless",
-	recipe = {"advtrains:moretrains_wagon_gondola", "default:mese", "default:mese"},
-})
-
-minetest.register_craft({
-	output = 'advtrains:moretrains_wagon_gondola_toiletpaper',
-	recipe = {
-		{'default:paper', 'default:paper', 'default:paper'},
-		{'default:paper', 'advtrains:moretrains_wagon_gondola', 'default:paper'},
-		{'default:paper', 'default:paper', 'default:paper'},
-	},
-})
-
-minetest.register_craft({
-	output = "advtrains:moretrains_wagon_gondola_cobble",
-	type = "shapeless",
-	recipe = {"advtrains:moretrains_wagon_gondola", "default:cobble", "default:cobble"},
-})
-
-minetest.register_craft({
-	output = "advtrains:moretrains_wagon_gondola_rails",
-	type = "shapeless",
-	recipe = {"advtrains:moretrains_wagon_gondola", "advtrains:dtrack_placer", "advtrains:dtrack_placer"},
-})
