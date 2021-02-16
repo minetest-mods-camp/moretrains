@@ -7,7 +7,7 @@ end
 
 
 local function escape_texture(str)
-	return str:gsub("\\[", "\\["):gsub(":", "\\:"):gsub("[\\^]", "\\^")
+	return str:gsub("[\\[]", "\\["):gsub(":", "\\:"):gsub("[\\^]", "\\^")
 end
 
 local function	set_textures(self, data)
@@ -33,23 +33,24 @@ local function	set_textures(self, data)
 						mesh="moretrains_gondola_mese.b3d",
 						textures={"[combine:256x256:0,0=moretrains_wagon_gondola_cobble.png:0,109="..escape_texture(texture).."\\^\\[resize\\:16x16"}
 				})
+				return
 			end
+		end
+		local idef = minetest.registered_items[name]
+		if idef and idef.groups.advtrains_trackplacer and idef.groups.advtrains_trackplacer > 0 then
+			self.object:set_properties({
+					mesh="moretrains_gondola_rails.b3d",
+					textures = {"moretrains_wagon_gondola.png"},
+			})
 		else
-			local idef = minetest.registered_items[name]
-			if idef and idef.groups.advtrains_trackplacer and idef.groups.advtrains_trackplacer > 0 then
-				self.object:set_properties({
-						mesh="moretrains_gondola_rails.b3d",
-						textures = {"moretrains_wagon_gondola.png"},
-				})
-			else
-				self.object:set_properties({
-						mesh="moretrains_gondola_toiletpaper.b3d",
-						textures = {"moretrains_wagon_gondola.png"},
-				})
-			end
-		end		
-	end
+			self.object:set_properties({
+					mesh="moretrains_gondola_toiletpaper.b3d",
+					textures = {"moretrains_wagon_gondola.png"},
+			})
+		end
+	end		
 end
+
 
 local function convert(self, dtime, data, train)
 	data.type = "advtrains:moretrains_wagon_gondola"
