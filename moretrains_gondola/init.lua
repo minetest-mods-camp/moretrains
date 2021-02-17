@@ -7,7 +7,7 @@ end
 
 
 local function escape_texture(str)
-	return str:gsub("[\\[]", "\\["):gsub(":", "\\:"):gsub("[\\^]", "\\^")
+	return str:gsub("[%[%()^:]", "\\%1")
 end
 
 local function	set_textures(self, data)
