@@ -142,6 +142,74 @@ advtrains.register_wagon("moretrains_silberling", {
 	drops={"default:steelblock"},
 }, S("MT Silberling Wagon"), "moretrains_silberling_inv.png")
 
+advtrains.register_wagon("moretrains_silberling_dining", {
+	mesh="moretrains_silberling_dining.b3d",
+	textures = {"moretrains_silberling_dining.png"},
+	drives_on={default=true},
+	max_speed=20,
+	seats = {
+		{
+			name="1L",
+			attach_offset={x=-3.4, y=-2, z=18},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+		{
+			name="1R",
+			attach_offset={x=3.4, y=-2, z=18},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+		{
+			name="2R",
+			attach_offset={x=3.4, y=-2, z=8},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+		{
+			name="3L",
+			attach_offset={x=-3.4, y=-2, z=-4},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+		{
+			name="3R",
+			attach_offset={x=3.4, y=-2, z=-3},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+		{
+			name="4L",
+			attach_offset={x=-3.4, y=-2, z=-14},
+			view_offset={x=0, y=-2, z=0},
+			group="pass",
+		},
+	},
+	seat_groups = {
+		pass={
+			name = "Passenger area",
+			access_to = {},
+			require_doors_open=true,
+		},
+	},
+	doors={
+		open={
+			[-1]={frames={x=20, y=30}, time=1},
+			[1]={frames={x=0, y=10}, time=1}
+		},
+		close={
+			[-1]={frames={x=30, y=40}, time=1},
+			[1]={frames={x=10, y=20}, time=1}
+		}
+	},
+	door_entry={-1.7},
+	assign_to_seat_group = {"pass"},
+	visual_size = {x=1, y=1},
+	wagon_span=3,
+	collisionbox = {-1.0,-0.5,-1.0, 1.0,2.5,1.0},
+	drops={"default:steelblock"},
+}, S("MT Silberling Dining Wagon"), "moretrains_silberling_dining_inv.png")
+
 advtrains.register_wagon("moretrains_diesel_german", {
 	mesh="moretrains_diesel_german.b3d",
 	textures = {"moretrains_diesel_german.png"},
@@ -277,6 +345,15 @@ minetest.register_craft({
 	recipe = {
 		{'default:steelblock', block, 'default:steelblock'},
 		{ingot, 'default:glass', ingot},
+		{'advtrains:wheel', '', 'advtrains:wheel'},
+	},
+})
+
+minetest.register_craft({
+	output = 'advtrains:moretrains_silberling_dining',
+	recipe = {
+		{'default:steelblock', block, 'default:steelblock'},
+		{ingot, 'default:furnace', ingot},
 		{'advtrains:wheel', '', 'advtrains:wheel'},
 	},
 })

@@ -47,6 +47,12 @@ mod - moretrains_basic:
 		texture: own
 		icon: own
 
+	silberling_dining
+
+		model: by Marnack, is a modified version of the silberling wagon model from this mod by rbduck (CC BY-SA 3.0)
+		texture: by Marnack, is a  modified version of the silberling wagon texture from this mod  by rbduck (CC BY-SA 3.0)
+		icon: by Marnack, is a modified version of the silberling wagon icon from this mod  by rbduck (CC BY-SA 3.0)
+
 	diesel train
 		model: own 
 		texture: own
