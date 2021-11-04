@@ -313,7 +313,6 @@ advtrains.register_wagon("moretrains_silberling_train", {
 			[1]={frames={x=30, y=40}, time=1}
 		}
 	},
-	assign_to_seat_group = {"dstand"},
 	visual_size = {x=1, y=1},
 	wagon_span=3,
 	is_locomotive=false,
