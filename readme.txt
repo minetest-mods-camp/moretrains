@@ -67,6 +67,15 @@ mod - moretrains_gondola:
 
 		icons based on box_wagon icon (moretrains_industrial)
 
+mod - moretrains_nightline:
+
+	A set of overnight passenger wagons with in fictional blue and red livery named, "Night Line" that was created for this mod.
+
+	nightline_couchette, nightline_seat_car
+		models and textures: by Marnack except for bogie, wheels and buffers which were copied from the silberling wagon in this mod by rbduck (CC BY-SA 3.0)
+		icons: by Marnack (CC BY-SA 3.0)
+		code: by Marnack is a modified version of the silberling wagon code from this mod by rbduck (LGPL 2.1)
+
 
 planned wagons / trains:
 hopper car (industrial)
